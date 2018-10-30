@@ -1,0 +1,24 @@
+#game {
+
+        /* position: absolute; */
+        /* top: 100px; */
+        /* left: 50%; */
+        /* -webkit-transform: translateX(-50%); */
+        /* transform: translateX(-50%); */
+        text-align: center;
+        /* align-content: center; */
+        background-image: url(https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-repeat: round;
+    
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+button{
+    display: block;
+}

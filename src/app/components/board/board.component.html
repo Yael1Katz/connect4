@@ -1,0 +1,5 @@
+<div id="board">
+  <div class="board-overlay"></div>
+  <app-column *ngFor="let col of boardArr; let i = index" class="column" [col]="col" [colIndex]="i" (updateState)="updateState($event)"
+    [playerOne]="playerOne" [gameOn]="gameOn"></app-column>
+</div>

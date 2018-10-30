@@ -1,0 +1,76 @@
+.cell-container{
+    /* border:1px solid black; */
+    background-color: rgb(40, 48, 122);
+    background-image: linear-gradient(to right bottom, #343c8e, #2e3582, #272f77, #21286b, #1b2260);
+    cursor: pointer;
+    border: 1px solid rgb(41, 40, 116);
+    border-radius: 50%;
+    margin-top: 40%;
+}
+
+.cell{
+    /* margin:2px; */
+    margin:auto;
+    padding:20px;
+    border-radius: 50%;
+}
+
+.cell.active.red{
+    background-color: red;
+    background-image: linear-gradient(to right bottom, #c42626, #a92027, #8e1c26, #731923, #59161f);
+}
+
+.cell.active.yellow{
+    background-color: yellow;
+    background-image: linear-gradient(to right bottom, #99a426, #acb624, #c0c721, #d5d91b, #ebeb12);
+}
+
+.cell.active.ghost-red{
+    background-color: rgba(194, 66, 66, 0.651);
+}
+
+.cell.active.ghost-yellow{
+    background-color: rgba(230, 230, 40, 0.418);
+}
+
+/* iphone 6/7/8 Plus */
+@media screen and (max-height:736px) and (max-width:414px) {
+    .cell{
+        padding:19px;
+    }
+}
+
+/* iphone X */
+@media screen and (max-height:812px) and (max-width:375px) {
+    .cell{
+        padding:16px;
+    }
+}
+
+/* iphone 6/7/8 */
+@media screen and (max-height:667px) and (max-width:375px) {
+    .cell{
+        padding:14px;
+    }
+}
+
+/* iphone 5 */
+@media screen and (max-height:568px) and (max-width:320px) {
+    .cell{
+        padding:12px;
+    }
+}
+
+@media screen and (max-height:564px) and (max-width:385px) {
+    .cell{
+        /* margin:2px; */
+        padding:15px;
+    }
+}
+
+
+
+
+
+
+

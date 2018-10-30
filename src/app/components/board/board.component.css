@@ -1,0 +1,23 @@
+.column{
+    display:inline-block;
+    margin: 8px;
+}
+
+#board {
+    position: relative;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    border: 1px solid #32358a;
+    background-color: rgb(48, 62, 180);
+    background-image: linear-gradient(to bottom, #3a47b7, #3945b6, #3844b4, #3642b2, #3541b1);
+    max-width: 470px;
+    /* max-width: 415px; */
+    margin: auto;
+    border-radius: 8px;
+}
+
+@media screen and (max-height:564px) and (max-width:385px) {
+    #board {
+        max-width: 100%;
+        height: auto;
+    }
+}

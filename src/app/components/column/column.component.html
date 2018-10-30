@@ -1,0 +1,4 @@
+<div *ngFor="let cell of col;let ce = index" class="column cell-container" (click)="clickColumn()"
+(mouseenter)="setGhost(true)" (mouseleave)="setGhost(false)" >
+  <div class="cell {{checkActive(ce)}} {{cellVal(ce)}}"></div>
+</div>
