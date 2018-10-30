@@ -57,7 +57,7 @@
 /* iphone 5 */
 @media screen and (max-height:568px) and (max-width:320px) {
     .cell{
-        padding:12px;
+        padding:10px;
     }
 }
 

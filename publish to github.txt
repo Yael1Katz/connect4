@@ -1,0 +1,10 @@
+ng build --prod --base-href "https://yael1katz.github.io/connect4/"
+ngh --dir dist/connect4
+
+https://alligator.io/angular/deploying-angular-app-github-pages/
+
+
+
+https://github.com/Yael1Katz/connect4
+
+https://yael1katz.github.io/connect4/
