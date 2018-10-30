@@ -1,5 +1,7 @@
 # Connect4
 
+link: https://yael1katz.github.io/connect4/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
 
 ## Development server
