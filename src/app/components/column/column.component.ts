@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import {CellType} from "../../shared/cell-type.enum";
+import { CellType } from "../../shared/cell-type.enum";
 
 @Component({
   selector: 'app-column',
@@ -7,7 +7,7 @@ import {CellType} from "../../shared/cell-type.enum";
   styleUrls: ['./column.component.css']
 })
 export class ColumnComponent implements OnInit {
-  
+
   @Input() col: Array<number>;
   @Input() colIndex: number;
   @Input() playerOne: boolean;
@@ -45,7 +45,9 @@ export class ColumnComponent implements OnInit {
 
   nextCell() {
     for (let i = this.col.length; i >= 0; i--) {
-      if (this.col[i] === CellType.Empty || this.col[i] === CellType.GhostRed || this.col[i] === CellType.GhostYellow) {
+      if (this.col[i] === CellType.Empty ||
+        this.col[i] === CellType.GhostRed ||
+        this.col[i] === CellType.GhostYellow) {
         return i;
       }
     }
@@ -66,7 +68,6 @@ export class ColumnComponent implements OnInit {
   };
 
   setGhost(show: boolean) {
-    //e.isPropagationStopped();
     const nextCell = this.nextCell();
     if (show && this.gameOn) {
       if (nextCell !== null) {

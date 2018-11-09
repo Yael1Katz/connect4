@@ -19,7 +19,7 @@ export class BoardComponent implements OnInit {
 
   ngOnInit() {
     this.resetGame();
-    this.gameService.resetGameEventEmitter.subscribe(isOpen => {
+    this.gameService.resetGameEventEmitter.subscribe(() => {
       this.resetGame();
     });
   }
@@ -50,15 +50,15 @@ export class BoardComponent implements OnInit {
     }
   };
 
-  winningMove() {
+  private winningMove() {
     let stopGame: boolean = false;
 
     stopGame = this.verticalCheck() ||
       this.horizontalCheck() ||
-      this.DiagonalCheck1() ||
-      this.DiagonalCheck2() ||
-      this.DiagonalCheck3() ||
-      this.DiagonalCheck4();
+      this.diagonalCheck1() ||
+      this.diagonalCheck2() ||
+      this.diagonalCheck3() ||
+      this.diagonalCheck4();
     return stopGame;
   };
 
@@ -84,7 +84,7 @@ export class BoardComponent implements OnInit {
   }
 
 
-  horizontalCheck(): boolean {
+  private horizontalCheck(): boolean {
     for (let r = 0; r < this.gameService.settings.rows; r++) {
       const row = this.boardArr.map((c, i) => {
         return this.boardArr[i][r];
@@ -96,7 +96,7 @@ export class BoardComponent implements OnInit {
     return false;
   }
 
-  verticalCheck(): boolean {
+  private verticalCheck(): boolean {
     for (let i = 0; i < this.gameService.settings.columns; i++) {
 
       if (this.checkLine(this.boardArr[i])) {
@@ -107,7 +107,7 @@ export class BoardComponent implements OnInit {
   }
 
 
-  DiagonalCheck1(): boolean {
+  private diagonalCheck1(): boolean {
     /*
 * Diagonal check 1 (first left to right check)
 *
@@ -135,7 +135,7 @@ export class BoardComponent implements OnInit {
     return false;
   }
 
-  DiagonalCheck2(): boolean {
+  private diagonalCheck2(): boolean {
     /*
      * Diagonal check 2 (last left to right check)
      *
@@ -164,7 +164,7 @@ export class BoardComponent implements OnInit {
     return false;
   }
 
-  DiagonalCheck3(): boolean {
+  private diagonalCheck3(): boolean {
     /*
      * Diagonal check 3 (first right to left check)
      *
@@ -192,7 +192,7 @@ export class BoardComponent implements OnInit {
     return false;
   }
 
-  DiagonalCheck4(): boolean {
+  private diagonalCheck4(): boolean {
     /*
       * Diagonal check 4 (last right to left check)
       *
